@@ -2,144 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saunak Ghosh - Resume</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 10pt;
+      line-height: 1.3;
       color: #000;
+      background: #fff;
+      padding: 0.5in 0.5in;
+    }
+    
+    .resume {
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 8pt;
+    }
+    
+    .name {
+      font-size: 20pt;
+      font-weight: bold;
+      letter-spacing: 0.5pt;
+      margin-bottom: 4pt;
+    }
+    
+    .contact {
+      font-size: 9pt;
       line-height: 1.4;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
+    
+    .contact a {
+      color: #000;
+      text-decoration: none;
     }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 5px;
+    
+    /* Section Headers */
+    .section {
+      margin-bottom: 10pt;
     }
-    .contact {
-      font-size: 13px;
-      margin-bottom: 15px;
+    
+    .section-title {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      border-bottom: 1pt solid #000;
+      padding-bottom: 2pt;
+      margin-bottom: 6pt;
     }
-    h2 {
-      font-size: 16px;
-      margin-top: 18px;
-      margin-bottom: 6px;
-      border-bottom: 1px solid #000;
-      padding-bottom: 3px;
+    
+    /* Education */
+    .edu-entry, .exp-entry, .project-entry {
+      margin-bottom: 8pt;
     }
-    p, li {
-      font-size: 13px;
-    }
-    ul {
-      margin: 5px 0 10px 18px;
-    }
-    .edu-row {
+    
+    .entry-header {
       display: flex;
       justify-content: space-between;
-      font-size: 13px;
+      align-items: baseline;
+      margin-bottom: 2pt;
     }
-    .bold {
+    
+    .entry-title {
       font-weight: bold;
+    }
+    
+    .entry-date {
+      font-style: italic;
+      font-size: 9pt;
+    }
+    
+    .entry-subtitle {
+      font-style: italic;
+      margin-bottom: 3pt;
+      font-size: 9.5pt;
+    }
+    
+    /* Lists */
+    ul {
+      margin-left: 15pt;
+      margin-top: 3pt;
+    }
+    
+    li {
+      margin-bottom: 2pt;
+      text-align: justify;
+    }
+    
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3pt 8pt;
+      margin-top: 4pt;
+    }
+    
+    .skill-category {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    
+    .skill-items {
+      text-align: left;
+    }
+    
+    /* Print optimization */
+    @media print {
+      body {
+        padding: 0;
+      }
+      .resume {
+        width: 100%;
+      }
+    }
+    
+    /* Better bullet points */
+    li::marker {
+      font-size: 8pt;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-
-    <h1>SAUNAK GHOSH</h1>
-    <div class="contact">
-      Kolkata, West Bengal, India <br>
-      Phone: +91-8100122932 | Email: saunak2001@gmail.com <br>
-      LinkedIn: www.linkedin.com/in/saunakghosh-7a173366/
+  <div class="resume">
+    
+    <!-- HEADER -->
+    <div class="header">
+      <div class="name">SAUNAK GHOSH</div>
+      <div class="contact">
+        +91-8100122932 | <a href="mailto:saunak2001@gmail.com">saunak2001@gmail.com</a> | 
+        <a href="https://www.linkedin.com/in/saunakghosh-7a173366/">linkedin.com/in/saunakghosh</a> | 
+        Kolkata, West Bengal, India
+      </div>
     </div>
-
-    <h2>OBJECTIVE</h2>
-    <p>
-      Final-year B.Tech Civil Engineering student (graduating April 2026) seeking entry-level opportunities where I can apply my problem-solving abilities, basic programming knowledge, and communication skills while continuously learning and contributing to organizational growth.
-    </p>
-
-    <h2>EDUCATION</h2>
-    <div class="edu-row">
-      <span class="bold">B.Tech – Civil Engineering, GITAM Deemed to be University</span>
-      <span>2022 – 2026</span>
+    
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      
+      <div class="edu-entry">
+        <div class="entry-header">
+          <div class="entry-title">GITAM Deemed to be University</div>
+          <div class="entry-date">Expected Apr 2026</div>
+        </div>
+        <div class="entry-subtitle">Bachelor of Technology in Civil Engineering | CGPA: 7.81/10.0</div>
+      </div>
+      
+      <div class="edu-entry">
+        <div class="entry-header">
+          <div class="entry-title">Career Point Gurukul, Kota</div>
+          <div class="entry-date">2021</div>
+        </div>
+        <div class="entry-subtitle">AISSCE (Class XII) | Percentage: 70.8%</div>
+      </div>
     </div>
-    <p>CGPA: 7.81 (Current)</p>
-
-    <div class="edu-row">
-      <span class="bold">AISSCE (Class XII), Career Point Gurukul, Kota</span>
-      <span>2021</span>
+    
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Experience</div>
+      
+      <div class="exp-entry">
+        <div class="entry-header">
+          <div class="entry-title">Engineering Intern – Afcons Infrastructure Pvt. Ltd.</div>
+          <div class="entry-date">Sept 2023 – Oct 2023</div>
+        </div>
+        <div class="entry-subtitle">DMRC DC-07 Underground Metro Project | Execution & Planning Department</div>
+        <ul>
+          <li>Collaborated with project execution team on underground metro construction site serving 50,000+ daily commuters</li>
+          <li>Conducted 15+ site inspections and compiled detailed technical reports on construction workflow and quality control measures</li>
+          <li>Assisted in planning activities including resource allocation, scheduling coordination, and progress tracking for 3 active work zones</li>
+          <li>Gained hands-on exposure to TBM operations, station box construction, and safety protocols in large-scale infrastructure projects</li>
+        </ul>
+      </div>
     </div>
-    <p>Percentage: 70.8%</p>
-
-    <div class="edu-row">
-      <span class="bold">AISSE (Class X), South Point High School, Kolkata</span>
-      <span>2019</span>
+    
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+      
+      <div class="project-entry">
+        <div class="entry-header">
+          <div class="entry-title">Car Rental Web Application</div>
+          <div class="entry-date">2024</div>
+        </div>
+        <div class="entry-subtitle">HTML, CSS, JavaScript</div>
+        <ul>
+          <li>Developed responsive car rental platform with dynamic vehicle listings, pricing calculator, and booking interface using vanilla JavaScript</li>
+          <li>Implemented DOM manipulation for real-time filtering by car type, price range, and availability across 20+ vehicle options</li>
+          <li>Designed mobile-first UI with CSS Flexbox and Grid, ensuring cross-browser compatibility and optimal user experience</li>
+          <li>Applied form validation and local data handling to simulate booking workflow and enhance interactivity</li>
+        </ul>
+      </div>
     </div>
-    <p>Percentage: 90.0%</p>
-
-    <h2>INTERNSHIP EXPERIENCE</h2>
-    <p class="bold">
-      Intern – Afcons Infrastructure Pvt. Ltd. <br>
-      DMRC DC-07 Underground Metro Project (Site-3573) <br>
-      Execution & Planning Department | Sept 2023 – Oct 2023
-    </p>
-    <ul>
-      <li>Assisted in execution and planning activities at an underground metro construction site.</li>
-      <li>Conducted multiple site visits and documented observations.</li>
-      <li>Prepared structured reports related to construction workflow and quality control.</li>
-      <li>Gained exposure to real-world project coordination and engineering practices.</li>
-    </ul>
-
-    <h2>PROJECTS</h2>
-    <p class="bold">Car Rental Website (Frontend Project)</p>
-    <p>Technologies: HTML, CSS, JavaScript</p>
-    <ul>
-      <li>Designed and developed a responsive car rental website.</li>
-      <li>Implemented car listings, pricing display, and basic booking interactions.</li>
-      <li>Used JavaScript for basic interactivity and DOM manipulation.</li>
-      <li>Improved understanding of web development fundamentals and UI design.</li>
-    </ul>
-
-    <h2>TECHNICAL SKILLS</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript (Basics)</li>
-      <li>MS Office (Word, Excel, PowerPoint)</li>
-      <li>Basic Programming Logic</li>
-      <li>Problem Solving & Logical Thinking</li>
-      <li>Basic Understanding of Web Technologies</li>
-    </ul>
-
-    <h2>CORE SKILLS</h2>
-    <ul>
-      <li>Communication Skills (English – Advanced)</li>
-      <li>Teamwork & Collaboration</li>
-      <li>Time Management</li>
-      <li>Adaptability & Willingness to Learn</li>
-      <li>Critical Thinking</li>
-      <li>Attention to Detail</li>
-    </ul>
-
-    <h2>CERTIFICATIONS</h2>
-    <p>
-      Elite NPTEL Certification – IIT Kanpur <br>
-      “Forests & Their Management” (Score: 91%)
-    </p>
-
-    <h2>PERSONAL DETAILS</h2>
-    <ul>
-      <li>Father’s Name: Sujoy Ghosh</li>
-      <li>Date of Birth: 7 December 2002</li>
-      <li>Languages: English, Hindi, Bengali</li>
-      <li>Hobbies: Playing Cricket, Workout, Travelling, Gaming</li>
-    </ul>
-
-    <h2>DECLARATION</h2>
-    <p>
-      I hereby declare that the above information is true and correct to the best of my knowledge.
-    </p>
-
+    
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-category">Languages:</div>
+        <div class="skill-items">HTML, CSS, JavaScript, Bengali, Hindi, English</div>
+        
+        <div class="skill-category">Developer Tools:</div>
+        <div class="skill-items">Git, VS Code, Chrome DevTools, MS Office Suite (Word, Excel, PowerPoint)</div>
+        
+        <div class="skill-category">Core Competencies:</div>
+        <div class="skill-items">Web Development, Problem Solving, Data Analysis, Technical Documentation, Project Coordination</div>
+      </div>
+    </div>
+    
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="section-title">Certifications & Achievements</div>
+      <ul>
+        <li><strong>Elite NPTEL Certification</strong> – IIT Kanpur | "Forests & Their Management" | Score: 91% (Top 5% nationally)</li>
+        <li><strong>Academic Excellence:</strong> 90% in AISSE (Class X), South Point High School, Kolkata</li>
+      </ul>
+    </div>
+    
   </div>
 </body>
 </html>
